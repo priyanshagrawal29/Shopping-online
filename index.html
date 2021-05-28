@@ -516,6 +516,17 @@ color:#ff2e70;
  }
 ]
 
+for(const p=0;p<products.length;p++){
+var product =
+document.getElementById("product");
+product.innerHTML+=`<div class="product" 
+style="background:url('https://i.imgur.com/${products[p].src}.jpg');
+background-size:cover;"
+onclick="info(${p})"     data-aos="zoom-in-up">
+<div id="info-p"><h2>${products[p].name}</h2>
+<button id="buy">Buy $${products[p].price}</button></div>
+</div>`  
+} 
 const coders = [
  {
   name:"Made by- Priyansh Agrawal",
